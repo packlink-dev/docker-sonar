@@ -1,11 +1,11 @@
-# Docker Sonar 
+# Docker Sonar
 
 This image contains a Sonar installation with the following plugins
 
    * sonar-javascript-plugin-2.11
    * sonar-python-plugin-1.5
    * sonar-groovy-plugin-1.3.1
-   * sonar-scalastyle-plugin-0.0.1-SNAPSHOT
+
 
 * Java 1.8
 
@@ -23,5 +23,6 @@ This image contains a Sonar installation with the following plugins
 ## Usage
 * Browse to Sonar : [http://localhost:9000](http://localhost:9000)
 
-User: admin
-Password: admin
+        User: admin
+        Password: admin
+

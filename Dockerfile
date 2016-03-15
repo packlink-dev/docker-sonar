@@ -1,13 +1,12 @@
-FROM ehdez73/docker-jdk8
+# https://github.com/SonarSource/docker-sonarqube/tree/442f950dae232fca8e1e919e017270971cee46f6/5.4
+FROM sonarqube:5.4
 MAINTAINER Ernesto Hernandez "ehdez73@gmail.com"
 
-EXPOSE 9000
+ENV SERVICE_NAME="sonar"
+ENV PLUGIN_FOLDER="/opt/sonarqube/extensions/plugins"
 
-RUN echo "deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/" >> /etc/apt/sources.list
-RUN apt-get update && apt-get upgrade -y
+ADD http://downloads.sonarsource.com/plugins/org/codehaus/sonar-plugins/python/sonar-python-plugin/1.5/sonar-python-plugin-1.5.jar $PLUGIN_FOLDER
+ADD https://sonarsource.bintray.com/Distribution/sonar-javascript-plugin/sonar-javascript-plugin-2.11.jar $PLUGIN_FOLDER
+ADD https://sonarsource.bintray.com/Distribution/sonar-groovy-plugin/sonar-groovy-plugin-1.3.1.jar $PLUGIN_FOLDER
 
-RUN apt-get install -y --force-yes sonar
-
-COPY plugins /opt/sonar/extensions/plugins
-
-CMD ["/opt/sonar/bin/linux-x86-64/sonar.sh","console"]
+# COPY plugins /opt/sonarqube/extensions/plugins
