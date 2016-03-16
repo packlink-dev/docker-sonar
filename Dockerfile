@@ -1,4 +1,3 @@
-# https://github.com/SonarSource/docker-sonarqube/tree/442f950dae232fca8e1e919e017270971cee46f6/5.4
 FROM sonarqube:5.4
 MAINTAINER Ernesto Hernandez "ehdez73@gmail.com"
 

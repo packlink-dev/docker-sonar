@@ -1,13 +1,11 @@
 # Docker Sonar
 
-This image contains a Sonar installation with the following plugins
+This image contains a Sonar 5.4 installation with the following plugins
 
    * sonar-javascript-plugin-2.11
    * sonar-python-plugin-1.5
    * sonar-groovy-plugin-1.3.1
-
-
-* Java 1.8
+   * sonar-build-breaker-plugin-2.0
 
 # Some useful commands:
 
