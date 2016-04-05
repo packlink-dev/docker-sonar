@@ -6,6 +6,8 @@ EXPOSE 9000
 ENV SERVICE_NAME="sonar"
 ENV PLUGIN_FOLDER="/opt/sonarqube/extensions/plugins"
 
+RUN echo "Europe/Madrid" > /etc/timezone; dpkg-reconfigure -f noninteractive tzdata
+
 # Add language plugins
 ADD https://sonarsource.bintray.com/Distribution/sonar-java-plugin/sonar-java-plugin-3.12.jar $PLUGIN_FOLDER
 ADD http://downloads.sonarsource.com/plugins/org/codehaus/sonar-plugins/python/sonar-python-plugin/1.5/sonar-python-plugin-1.5.jar $PLUGIN_FOLDER
