@@ -7,5 +7,6 @@ docker rmi -f ehdez73/docker-sonar
 docker build --tag="ehdez73/docker-sonar" .
 docker run -d \
 	-p 9000:9000 \
+	-e SERVICE_9000_NAME=sonar \
 	--name="sonar" ehdez73/docker-sonar
 

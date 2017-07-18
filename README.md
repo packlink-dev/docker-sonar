@@ -2,10 +2,12 @@
 
 This image contains a Sonar 5.4 installation with the following plugins
 
-   * sonar-javascript-plugin-2.11
-   * sonar-python-plugin-1.5
-   * sonar-groovy-plugin-1.3.1
-   * sonar-build-breaker-plugin-2.0
+   * sonar-java-plugin-4.6.0.8784
+   * sonar-javascript-plugin-2.21.0.4409
+   * sonar-python-plugin-
+   * sonar-groovy-plugin-1.4
+   * sonar-php-plugin-2.9.2.1744
+   * qualinsight-sonarqube-smell-plugin-4.0.0
 
 # Some useful commands:
 
@@ -16,6 +18,7 @@ This image contains a Sonar 5.4 installation with the following plugins
     $ docker docker run -d \
           -p 9000:9000 \
           --name="sonar" \
+          -e SERVICE_9000_NAME=sonar
           ehdez73/docker-sonar
 
 ## Usage
